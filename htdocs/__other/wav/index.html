@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>WAV　プレイヤー</title>
+    <link rel="stylesheet" type="text/css" href="css/vesper.min.css">
+    <script src="js/vendor/id3.min.js"></script>
+    <script src="js/vendor/observer.js"></script>
+    <script src="js/vendor/wavesurfer.js"></script>
+    <script src="js/vendor/webaudio.js"></script>
+    <script src="js/vendor/drawer.js"></script>
+    <script src="js/vesper.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f0f0; }
+        .container { max-width: 800px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #333; }
+        .playlist { list-style-type: none; padding: 0; }
+        .playlist li { margin: 10px 0; padding: 10px; background-color: #f9f9f9; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+        .playlist li:hover { background-color: #e9e9e9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wavプレイヤー</h1>
+        <h4>ストレージ内にあったWav音源を簡易的に視聴できるようにしたプレイヤーです。元音源はwavですが軽量化のためflacに変換してます。</h4>
+        <div class="audio-set">
+            <audio id="player" src="" controls="controls" ontimeupdate="zTimeUpdate()"></audio>
+
+            <div id="art" class="audio-art"></div>
+
+            <div class="audio-info">
+                <span id="artist"></span>
+                <span id="album"></span>
+                <div class="waveform"></div>
+            </div>
+        </div>
+
+        <ul class="playlist">
+            <li onclick="loadTrack('andante_cantabile.flac')">1.andante_cantabile</li>
+            <li onclick="loadTrack('clair_du_lune.flac')">2.clair_du_lune</li>
+            <li onclick="loadTrack('flowers_will_bloom.flac')">3.flowers_will_bloom</li>
+            <li onclick="loadTrack('gavotte.flac')">4.gavotte</li>
+            <li onclick="loadTrack('humoresque.flac')">5.humoresque</li>
+            <li onclick="loadTrack('introduction_bach_sinfonia_bwv787.flac')">6.introduction_bach_sinfonia_bwv787</li>
+            <li onclick="loadTrack('Introduction_to_oboe_concerto.flac')">7.Introduction_to_oboe_concerto</li>
+            <li onclick="loadTrack('inventions.flac')">8.inventions</li>
+            <li onclick="loadTrack('londonderry_air.flac')">9.londonderry_air</li>
+            <li onclick="loadTrack('moulin_rouge.flac')">10.moulin_rouge</li>
+            <li onclick="loadTrack('my_country.flac')">11.my_country</li>
+            <li onclick="loadTrack('red_dragonfly.flac')">12.red_dragonfly</li>
+            <li onclick="loadTrack('shubert_ave_maria.flac')">13.shubert_ave_maria</li>
+            <li onclick="loadTrack('siciliana.flac')">14.siciliana</li>
+            <li onclick="loadTrack('skaters_waltz_full.flac')">15.skaters_waltz_full</li>
+            <li onclick="loadTrack('snow.flac')">16.snow</li>
+            <li onclick="loadTrack('spring_creek.flac')">17.spring_creek</li>
+            <li onclick="loadTrack('tsummer_has_come.flac')">18.summer_has_come</li>
+            <li onclick="loadTrack('ttoccata_und_fugue.flac')">19.toccata_und_fugue</li>
+            <li onclick="loadTrack('turkish_march.flac')">20.turkish_march</li>
+            <li onclick="loadTrack('valse_du_petit_chien.flac')">21.valse_du_petit_chien</li>
+        </ul>
+    </div>
+
+    <script>
+        function loadTrack(trackSrc) {
+            var player = document.getElementById('player');
+            player.src = trackSrc;
+            player.load();
+            zPlayPause();
+        }
+
+        // Vesperの初期化
+        window.onload = function() {
+            zVesper();
+        };
+    </script>
+</body>
+</html>
