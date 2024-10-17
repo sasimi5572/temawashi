@@ -1,90 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="stylesheet" type="text/css" href="../css.css">
-<title>MuseScore�ō쐬�����y�����玩���Ńu�b�N�ؔ����p�^�[�����쐬������@</title>
+<title>MuseScoreで作成した楽譜から自動でブック切抜きパターンを作成する方法</title>
 </head>
 <body>
-<h1>MuseScore�ō쐬�����y�����玩���Ńu�b�N�ؔ����p�^�[�����쐬������@</h1>
+<h1>MuseScoreで作成した楽譜から自動でブック切抜きパターンを作成する方法</h1>
 
-<h2>�p�ӂ���\�t�g�E�F�A</h2>
-<p>���L�̃\�t�g�E�F�A�i��������t���[�j���C���X�g�[�����Ă����B</p>
+<h2>用意するソフトウェア</h2>
+<p>下記のソフトウェア（いずれもフリー）をインストールしておく。</p>
 <ul class="no_mark">
-<li><a href="https://musescore.org/ja">MuseScore</a>�@�y���G�f�B�^�@����炷���Ƃ��ł���</li>
-<li><a href="http://xyzzy-022.github.io/">xyzzy</a>�@Emax�ɗގ���Lisp�𓋍ڂ���windows�p�e�L�X�g�G�f�B�^</li>
-<li><a href="https://www.google.co.jp/chrome/browser/desktop/">Google Chrome</a>�@�u���E�U�iIE�AFirefox�ȂǑ��̃u���E�U�ł͈�����̐��@������Ȃ��j</li>
+<li><a href="https://musescore.org/ja">MuseScore</a>　楽譜エディタ　音を鳴らすこともできる</li>
+<li><a href="http://xyzzy-022.github.io/">xyzzy</a>　Emaxに類似のLispを搭載したwindows用テキストエディタ</li>
+<li><a href="https://www.google.co.jp/chrome/browser/desktop/">Google Chrome</a>　ブラウザ（IE、Firefoxなど他のブラウザでは印刷時の寸法が合わない）</li>
 </ul>
 
-<h2>������</h2>
+<h2>下準備</h2>
 <h3>MuseScore</h3>
-<p>���L�����N�̃t�@�C�����E�N���b�N���ă_�E�����[�h����B</p>
+<p>下記リンクのファイルを右クリックしてダウンロードする。</p>
 <ul class="no_mark"><li><a href="street_organs_andante.xml">street_organs_andante.xml</a></li></ul>
-<p>���̃t�@�C�����A���L�t�H���_�ɒu���Ă����B</p>
-<ul class="no_mark"><li>�i���[�U�j\documents\Musescore2\�X�R�A\</li></ul>
-<p>MuseScore���N�����A�u�ҏW�v���u���ݒ�v�́u�X�R�A�v�^�u�́u�y�탊�X�g2�v�ɏ�L�t�@�C�����w�肷��B����ŁA�y����V�K�쐬����Ƃ��ɁA�W�������u��񂵃I���K���v�́u���g��̎�񂵃I���K���v����R��ނ̎�񂵃I���K�����y��Ɏw��ł���悤�ɂȂ�B</p>
+<p>このファイルを、下記フォルダに置いておく。</p>
+<ul class="no_mark"><li>（ユーザ）\documents\Musescore2\スコア\</li></ul>
+<p>MuseScoreを起動し、「編集」→「環境設定」の「スコア」タブの「楽器リスト2」に上記ファイルを指定する。これで、楽譜を新規作成するときに、ジャンル「手回しオルガン」の「安暖庭の手回しオルガン」から３種類の手回しオルガンを楽器に指定できるようになる。</p>
 
 <h3>xyzzy</h3>
 <ol>
-<li>���L�����N�̂Q�̃t�@�C�����E�N���b�N���ă_�E�����[�h����B
+<li>下記リンクの２つのファイルを右クリックしてダウンロードする。
 <ul class="no_mark">
 <li><a href="sobc.l">sobc.l</a></li>
 <li><a href="sobc.lc">sobc.lc</a></li>
 </ul>
 </li>
-<li>�����̃t�@�C�����A���L�t�H���_�ɒu���Ă����B
-<ul class="no_mark"><li>�iProgram Files�Ƃ��j\xyzzy\lisp\</li></ul>
+<li>これらのファイルを、下記フォルダに置いておく。
+<ul class="no_mark"><li>（Program Filesとか）\xyzzy\lisp\</li></ul>
 </li>
-<li>���L�̃t�@�C�����e�L�X�g�G�f�B�^�i�������xyzzy�ŗǂ��j�ŊJ���B
-<ul class="no_mark">�iProgram Files�Ƃ��j\xyzzy\site-lisp\siteinit.l</li></ul>
+<li>下記のファイルをテキストエディタ（もちろんxyzzyで良い）で開く。
+<ul class="no_mark">（Program Filesとか）\xyzzy\site-lisp\siteinit.l</li></ul>
 </li>
-<li>���̂P�s��ǉ����A�㏑���ۑ�����B
+<li>次の１行を追加し、上書き保存する。
 <ul class="no_mark"><li>(load-library "sobc")</li></ul>
 </li>
-<li>xyzzy���J���Ă���Ȃ��U����BShift��Ctrl�𓯎��ɉ����Ȃ���xyzzy���N������BShift��Ctrl��xyzzy���N������܂ł������艟���Ă����B</li>
+<li>xyzzyを開いているなら一旦閉じる。ShiftとCtrlを同時に押しながらxyzzyを起動する。ShiftとCtrlはxyzzyが起動するまでしっかり押しておく。</li>
 </ol>
-<p>����ŁAxyzzy�̃��j���[�o�[�ɁuSOBC�v(Street Organ Book Creator)�Ƃ������ڂ��ǉ������B</p>
+<p>これで、xyzzyのメニューバーに「SOBC」(Street Organ Book Creator)という項目が追加される。</p>
 
-<h2>�g����</h2>
+<h2>使い方</h2>
 <h3>MuseScore</h3>
-<p>�u���g��̎�񂵃I���K���v����A�����ꂩ�̊y���I�����A�Ƒt�̊y�����쐬����B�e�y��ɂ́A���̐ݒ肪�Ȃ���Ă���B</p>
-<dl><dt>����</dt>
-<dd>�e�y��̉���iModel II�ł͒ቹ�̂܂΂�ȉ���Ɂu�v����������v��ݒ�j</dd>
-<dt>�i��</dt>
-<dd>�S�i�iModel I�͂R�i�j</dd>
-<dt>�����L��</dt>
-<dd>�g���R�i �{ (Model I �ȊO�ɂ�) �w���P�i�A���ׂĂP�I�N�^�[����</dd>
-<dt>�A�[�e�B�L�����[�V����</dt>
-<dd>�e�k�[�g�F0.87</dd>
-<dd>�e�k�[�g�E�X�^�b�J�[�g�F0.76</dd>
-<dd>�X�^�b�J�[�g�F0.66</dd>
-<dd>�X�^�b�J�[�e�B�V���F0.57</dd>
+<p>「安暖庭の手回しオルガン」から、いずれかの楽器を選択し、独奏の楽譜を作成する。各楽器には、次の設定がなされている。</p>
+<dl><dt>音域</dt>
+<dd>各楽器の音域（Model IIでは低音のまばらな音域に「プロ向け音域」を設定）</dd>
+<dt>段数</dt>
+<dd>４段（Model Iは３段）</dd>
+<dt>音部記号</dt>
+<dd>ト音３段 ＋ (Model I 以外には) ヘ音１段、すべて１オクターヴ上</dd>
+<dt>アーティキュレーション</dt>
+<dd>テヌート：0.87</dd>
+<dd>テヌート・スタッカート：0.76</dd>
+<dd>スタッカート：0.66</dd>
+<dd>スタッカーティシモ：0.57</dd>
 </dl>
 
-<p>�y���̒i���≹���L���͎��R�ɕύX���Ă��܂�Ȃ��B�������A�p�[�g�𑝂₵�Ă͂Ȃ�Ȃ��B</p>
+<p>楽譜の段数や音部記号は自由に変更してかまわない。ただし、パートを増やしてはならない。</p>
 
-<p>�A�[�e�B�L�����[�V�����̎w�肪�Ȃ���΁A�A�[�e�B�L�����[�V�����̒l��1�Ƃ݂Ȃ����B��L�A�[�e�B�L�����[�V�����̒l�́A�X�^�b�J�[�e�B�V�����Z�����ɂ͉����������̉�����I������Ηǂ����Ƃ��l���A1����0.5�Ɍ��������䐔��ƂȂ��Ă���B</p>
+<p>アーティキュレーションの指定がなければ、アーティキュレーションの値は1とみなされる。上記アーティキュレーションの値は、スタッカーティシモより短い音には音価が半分の音符を選択すれば良いことを考え、1から0.5に向けた等比数列となっている。</p>
 
 <figure>
 <p style="text-align: center; padding: 0; margin: 0"><img src="articulations.svg" alt=""></p>
-<figcaption style="text-align: center">�A�[�e�B�L�����[�V�����̒���</figcaption>
+<figcaption style="text-align: center">アーティキュレーションの長さ</figcaption>
 </figure>
 
-<p>���������y���́A�u�񈳏kMusicXML�t�@�C���v(".xml" �܂��� ".musicxml")�`���ŃG�N�X�|�[�g����B</p>
+<p>完成した楽譜は、「非圧縮MusicXMLファイル」(".xml" または ".musicxml")形式でエクスポートする。</p>
 
 <h3>xyzzy</h3>
 <ol>
-<li>MuseScore�ō쐬����.xml(�܂���.musicxml)�t�@�C����xyzzy�ŊJ���B�u�u�b�N�����܂����v�̃_�C�A���O�������B</li>
-<li>�I���K���̃��f����I������i���łɓ���xml����쐬�����u�b�N������ꍇ�A�쐬���Ȃ������⍇��������j�B</li>
-<li>�u�b�N�̑��葬�x���w�肷��B�ʏ�� 45 mm/s �Ŗ��Ȃ��B</li>
+<li>MuseScoreで作成した.xml(または.musicxml)ファイルをxyzzyで開く。「ブックを作りますか」のダイアログが現れる。</li>
+<li>オルガンのモデルを選択する（すでに同じxmlから作成したブックがある場合、作成しなおすか問合せがある）。</li>
+<li>ブックの送り速度を指定する。通常は 45 mm/s で問題ない。</li>
 </ol>
-<p>����ŁA�u�b�N�̐ؔ����p�^�[����svg�摜���܂�html�t�@�C�����������AChrome�ŊJ�����B</p>
-<p>�����ŁA�c�[���o�[�́uSOBC�v����ubook������web�p��index��html���쐬�v�����s���A�J�����t�@�C������ȖڂɊ֘A����K���ȃt�@�C����I������Ɓi�g���q��"_book"�͖��������j�A���̋Ȗڂ�index�I�ȃt�@�C���i���̃T�C�g�ɂ���X�̋Ȃ�index�I�t�@�C���Ɠ����̍فj�������Ő�������B�܂��A�Ȗڃ��X�g�ł���uSOBC-index.html�v�ɓ��Y��index�I�t�@�C���ւ̃����N���Ȃ���΁A�����Œǉ�����B������̃t�@�C�����A�ȖڏЉ�̕����͎蓮�œ��́iindex�I�t�@�C���ł�&lt;p&gt;&lt;/p&gt;�ԁA�uSOBC-index.html�v�ł�&lt;/a&gt;&lt;/li&gt;�ԁj���čĕۑ����邱�ƁB</p>
-<h2>���ڂ�����</h2>
-<p><a href="sobc.l">sobc.l</a>�ilisp�̃\�[�X�R�[�h�j�����ǂ݂��������B�Ȃ��AMuseScore��partwise��musicXML��f���o���A���̃v���O�����͒P��p�[�g�̊y�������߂��Ƃɒ����������Ă��邽�߁A���̃v���O���������ς��ĕ����̉��F��Ŋy��̂����񂵃I���K���p�̃u�b�N�쐬���s���ꍇ�A�e���߂ɕ����̃p�[�g�̃f�[�^���܂Ƃ߂�H�v��������K�v������܂��B�u���߂̃��X�g�v�����ߔԍ��ɂ��z��ɂ��Ă����āA�p�[�g���Ƃɉ����f�[�^��append����A�Ƃ��B</p>
+<p>これで、ブックの切抜きパターンのsvg画像を含むhtmlファイルが生成し、Chromeで開かれる。</p>
+<p>次いで、ツールバーの「SOBC」から「book等からweb用のindexのhtmlを作成」を実行し、開かれるファイラから曲目に関連する適当なファイルを選択すると（拡張子と"_book"は無視される）、この曲目のindex的なファイル（このサイトにある個々の曲のindex的ファイルと同じ体裁）が自動で生成する。また、曲目リストである「SOBC-index.html」に当該曲index的ファイルへのリンクがなければ、自動で追加する。いずれのファイルも、曲目紹介の文言は手動で入力（index的ファイルでは&lt;p&gt;&lt;/p&gt;間、「SOBC-index.html」では&lt;/a&gt;&lt;/li&gt;間）して再保存すること。</p>
+<h2>より詳しくは</h2>
+<p><a href="sobc.l">sobc.l</a>（lispのソースコード）をお読みください。なお、MuseScoreはpartwiseのmusicXMLを吐き出し、このプログラムは単一パートの楽譜を小節ごとに逐次処理しているため、このプログラムを改変して複数の音色や打楽器のある手回しオルガン用のブック作成を行う場合、各小節に複数のパートのデータをまとめる工夫を加える必要があります。「小節のリスト」を小節番号による配列にしておいて、パートごとに音符データをappendする、とか。</p>
 <ul class="no_mark">
-<!--<li><a href="../print_tips/print_tips.html">������@�̃q���g</a></li>-->
-<li><a href="../index0.html">�Ȗڈꗗ</a></li>
+<!--<li><a href="../print_tips/print_tips.html">印刷方法のヒント</a></li>-->
+<li><a href="../index0.html">曲目一覧</a></li>
 </ul>
 
 </body>
