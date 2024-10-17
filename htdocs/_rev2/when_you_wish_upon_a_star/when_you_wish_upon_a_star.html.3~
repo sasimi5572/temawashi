@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>星に願いを</title>
+</head>
+<body>
+<h3>星に願いを</h3>
+<p>こんな具合でいかがでしょうか。</p>
+<!--
+<p>2017/09/21 １ヶ所直しました。11小節目です。できたら訂正をお願いしたいと思います。</p>
+<p>訂正前のその辺の音</p>
+<audio controls src="when_you_wish_upon_a_star_bar11.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<p>訂正後のその辺の音</p>
+<audio controls src="when_you_wish_upon_a_star_1_bar11.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<p>以下はこの11小節目だけのブックパターンと譜面です。</p>
+<ul>
+<li><a href="when_you_wish_upon_a_star_1_bar11_book.html">ブックパターン</a>(html)　←Chromeでの印刷はこちらをどうぞ</li>
+<li><a href="when_you_wish_upon_a_star_1_bar11.pdf">譜面</a>(pdf)</li>
+<li><a href="when_you_wish_upon_a_star1__bar11.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+
+<p>ここから下は全曲を訂正後のファイルに差替えてあります</p>
+-->
+<audio controls src="when_you_wish_upon_a_star.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<ul>
+<li><a href="when_you_wish_upon_a_star_1_book.html">ブックパターン</a>(html)　←Chromeでの印刷はこちらをどうぞ</li>
+<li><a href="when_you_wish_upon_a_star_1.pdf">譜面</a>(pdf)</li>
+<li><a href="when_you_wish_upon_a_star_1.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>

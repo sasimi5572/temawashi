@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<!-- SOBC pseudo-index file -->
+<!--
+******************************************************************************
+	this file is semi-automatically generated 
+	by Street Organ Music Book Creator library 
+	SOBC v2.30
+	words in paragraph "about_this_music" to be inserted manually
+******************************************************************************
+-->
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>子犬のワルツ</title>
+</head>
+<body>
+<h1 id="music-title">子犬のワルツ</h1>
+<p id="about_this_music">
+ショパンの当時の連れ合いだったジョルジュ・サンドの飼い犬が自分の尻尾を追いかけてくるくる回る様を見て着想を得たとやら。
+</p>
+<p>8/6　細かい音符の扱いを少々改善しました。</p>
+<p>8/13　更に細かい音符の扱いを改善しました。世のピアニストは実際皆こんな風に弾いているのではないかと。</p>
+<audio controls src="valse_du_petit_chien.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<ul>
+<li><a href="valse_du_petit_chien_book.html">ブックパターン</a>(html)　← Chromeでの印刷はこちらをどうぞ</li>
+<li><a href="valse_du_petit_chien.pdf">譜面</a>(pdf)</li>
+<li><a href="valse_du_petit_chien.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<p><a href="../SOBC-index.html">曲目一覧に戻る</a></p>
+</body>
+</html>

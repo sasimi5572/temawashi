@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<museScore>
+      <Genre id="street-organ">
+            <name>手回しオルガン</name>
+      </Genre>
+                  <Articulation>
+                        <velocity>100</velocity>
+                        <gateTime>100</gateTime>
+                  </Articulation>
+                  <Articulation name="staccatissimo">
+                        <velocity>100</velocity>
+                        <gateTime>33</gateTime>
+                  </Articulation>
+                  <Articulation name="staccato">
+                        <velocity>100</velocity>
+                        <gateTime>50</gateTime>
+                  </Articulation>
+                  <Articulation name="portato">
+                        <velocity>100</velocity>
+                        <gateTime>67</gateTime>
+                  </Articulation>
+                  <Articulation name="tenuto">
+                        <velocity>100</velocity>
+                        <gateTime>100</gateTime>
+                  </Articulation>
+      <Articulation name="marcato">
+            <velocity>120</velocity>
+            <gateTime>67</gateTime>
+      </Articulation>
+      <Articulation name="sforzato">
+            <velocity>120</velocity>
+            <gateTime>100</gateTime>
+      </Articulation>
+      <InstrumentGroup id="andante">
+            <name>安暖庭</name>
+            <Instrument id="model-i">
+                  <longName>Model I</longName>
+                  <shortName></shortName>
+                  <description>Model I</description>
+                  <musicXMLid>wind.flutes.panpipes</musicXMLid>
+                  <staves>3</staves>
+                  <bracket>0</bracket>
+                  <bracketSpan>3</bracketSpan>
+                  <clef>G8va</clef>
+                  <clef staff="2">G8va</clef>
+                  <clef staff="3">G8va</clef>
+                  <aPitchRange>67-91</aPitchRange>
+                  <pPitchRange>67-91</pPitchRange>
+                  <Articulation>
+                        <velocity>100</velocity>
+                        <gateTime>100</gateTime>
+                  </Articulation>
+                  <Articulation name="staccatissimo">
+                        <velocity>100</velocity>
+                        <gateTime>57</gateTime>
+                  </Articulation>
+                  <Articulation name="staccato">
+                        <velocity>100</velocity>
+                        <gateTime>66</gateTime>
+                  </Articulation>
+                  <Articulation name="portato">
+                        <velocity>100</velocity>
+                        <gateTime>76</gateTime>
+                  </Articulation>
+                  <Articulation name="tenuto">
+                        <velocity>100</velocity>
+                        <gateTime>87</gateTime>
+                  </Articulation>
+                  <Channel>
+                        <program value="75"/>
+                  </Channel>
+                  <genre>common</genre>
+                  <genre>street-organ</genre>
+            </Instrument>
+            <Instrument id="model-ii">
+                  <longName>Model II</longName>
+                  <shortName></shortName>
+                  <description>Model II</description>
+                  <musicXMLid>wind.flutes.panpipes</musicXMLid>
+                  <staves>4</staves>
+                  <bracket>0</bracket>
+                  <bracketSpan>4</bracketSpan>
+                  <barlineSpan>1</barlineSpan>
+                  <clef>G8va</clef>
+                  <clef staff="2">G8va</clef>
+                  <clef staff="3">G8va</clef>
+                  <clef staff="4">F8va</clef>
+                  <aPitchRange>65-91</aPitchRange>
+                  <pPitchRange>53-91</pPitchRange>
+                  <Articulation>
+                        <velocity>100</velocity>
+                        <gateTime>100</gateTime>
+                  </Articulation>
+                  <Articulation name="staccatissimo">
+                        <velocity>100</velocity>
+                        <gateTime>57</gateTime>
+                  </Articulation>
+                  <Articulation name="staccato">
+                        <velocity>100</velocity>
+                        <gateTime>66</gateTime>
+                  </Articulation>
+                  <Articulation name="portato">
+                        <velocity>100</velocity>
+                        <gateTime>76</gateTime>
+                  </Articulation>
+                  <Articulation name="tenuto">
+                        <velocity>100</velocity>
+                        <gateTime>87</gateTime>
+                  </Articulation>
+                  <Channel>
+                        <program value="75"/>
+                  </Channel>
+                  <genre>common</genre>
+                  <genre>street-organ</genre>
+            </Instrument>
+            <Instrument id="model-iii">
+                  <longName>Model III</longName>
+                  <shortName></shortName>
+                  <description>Model III</description>
+                  <musicXMLid>wind.flutes.panpipes</musicXMLid>
+                  <staves>4</staves>
+                  <bracket>0</bracket>
+                  <bracketSpan>4</bracketSpan>
+                  <barlineSpan>1</barlineSpan>
+                  <clef>G8va</clef>
+                  <clef staff="2">G8va</clef>
+                  <clef staff="3">G8va</clef>
+                  <clef staff="4">F8va</clef>
+                  <aPitchRange>55-91</aPitchRange>
+                  <pPitchRange>55-91</pPitchRange>
+                  <Articulation>
+                        <velocity>100</velocity>
+                        <gateTime>100</gateTime>
+                  </Articulation>
+                  <Articulation name="staccatissimo">
+                        <velocity>100</velocity>
+                        <gateTime>57</gateTime>
+                  </Articulation>
+                  <Articulation name="staccato">
+                        <velocity>100</velocity>
+                        <gateTime>66</gateTime>
+                  </Articulation>
+                  <Articulation name="portato">
+                        <velocity>100</velocity>
+                        <gateTime>76</gateTime>
+                  </Articulation>
+                  <Articulation name="tenuto">
+                        <velocity>100</velocity>
+                        <gateTime>87</gateTime>
+                  </Articulation>
+                  <Channel>
+                        <program value="75"/>
+                  </Channel>
+                  <genre>common</genre>
+                  <genre>street-organ</genre>
+            </Instrument>
+      </InstrumentGroup>
+</museScore>

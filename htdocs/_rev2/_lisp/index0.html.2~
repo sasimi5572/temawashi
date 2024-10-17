@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>技術情報</title>
+</head>
+<body>
+<h3>技術情報</h3>
+<p>ヴァージョンが上がりlispプログラムのファイル名が変更されています。</p>
+<ul>
+	<li><a href="https://musescore.org/ja">MuseScore</a> 楽譜作成ソフト</li>
+	<li><a href="http://xyzzy-022.github.io/">xyzzy</a> Windows版Emaxクローンみたいなエディタ LispはCommon Lispに準じている</li>
+	<li><a href="sobc.l">create-svg.l</a> xyzzyのlispプログラム
+　		<ul>
+			<li>MuseScoreで作成したxmlファイルを基に、縦18cm×横5mとかの横長のブックのsvg画像を作成し、viewboxを動かして印刷用A4用紙大のページを切替えて表示するjavascriptを有するhtmlに包含させる</li>
+			<li>このサイトの曲目indexとなるhtmlファイルの自動生成機能もあり</li>
+			<li>xyzzyのメニューバーにこれらのコマンドを追加する</li>
+		</ul>
+	</li>
+	<li><a href="street_organs_andante.xml">MuseScoreの楽器一覧ファイルの追加分</a> 編集 - 環境設定 - スコア の「楽器リスト2」に設定する
+
+	<li><a href="usage.html">MuseScoreで作成した楽譜から自動でブック切抜きパターンを作成する方法</a></li>
+
+</ul>
+
+<dl><dt>編曲者連絡先</dt>
+<dd><a href="mailto:mass.ishiz@gmail.com?subject=[Andante] ">メール</a></dd>
+<dd>携帯電話：070-5589-2899</dd>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>

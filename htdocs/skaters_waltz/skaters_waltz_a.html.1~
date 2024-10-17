@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>スケーターズ・ワルツ</title>
+</head>
+<body>
+<h3>スケーターズ・ワルツ</h3>
+<ul>
+<li><a href="skaters_waltz_a.pdf">譜面</a>(pdf)</li>
+<li><a href="skaters_waltz_a_book.pdf">ブックパターン</a>(pdf)</li>
+<li><a href="skaters_waltz_a.mp3">参考音源</a>(mp3)</li>
+<li><a href="skaters_waltz_a_book.html">ブックパターンの元ファイル</a>(html)</li>
+<li><a href="skaters_waltz_a.xml">譜面の元ファイルのテキストデータ</a>(xml)</li>
+<li><a href="skaters_waltz_a.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<audio controls src="skaters_waltz_a.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>MuseScoreで作成した楽譜から自動でブック切抜きパターンを作成する方法</title>
+</head>
+<body>
+<h1>MuseScoreで作成した楽譜から自動でブック切抜きパターンを作成する方法</h1>
+
+<h2>用意するソフトウェア</h2>
+<p>下記のソフトウェア（いずれもフリー）をインストールしておく。</p>
+<ul class="no_mark">
+<li><a href="https://musescore.org/ja">MuseScore</a>　楽譜エディタ　音を鳴らすこともできる</li>
+<li><a href="http://xyzzy-022.github.io/">xyzzy</a>　Lispを搭載したEmaxに類似したテキストエディタ</li>
+<li><a href="https://www.google.co.jp/chrome/browser/desktop/">Google Chrome</a>　ブラウザ（IE、Firefoxなど他のブラウザでは印刷時の寸法が合わない）</li>
+</ul>
+
+<h2>下準備</h2>
+<h3>MuseScore</h3>
+<p>下記リンクのファイルを右クリックしてダウンロードする。</p>
+<ul class="no_mark"><li><a href="street_organs_andante.xml">street_organs_andante.xml</a></li></ul>
+<p>このファイルを、下記フォルダに置いておく。</p>
+<ul class="no_mark"><li>（ユーザ）\documents\Musescore2\スコア\</li></ul>
+<p>MuseScoreを起動し、「編集」→「環境設定」の「スコア」タブの「楽器リスト2」に上記ファイルを指定する。これで、楽譜を新規作成するときに、ジャンル「手回しオルガン」の「安暖庭の手回しオルガン」から３種類の手回しオルガンを楽器に指定できるようになる。</p>
+
+<h3>xyzzy</h3>
+<ol>
+<li>下記リンクの２つのファイルを右クリックしてダウンロードする。
+<ul class="no_mark">
+<li><a href="create-svg.l">create-svg.l</a></li>
+<li><a href="create-svg.lc">create-svg.lc</a></li>
+</ul>
+</li>
+<li>これらのファイルを、下記フォルダに置いておく。
+<ul class="no_mark"><li>Program Files\xyzzy\lisp\</li></ul>
+</li>
+<li>下記のファイルをテキストエディタ（もちろんxyzzyで良い）で開く。
+<ul class="no_mark">Program Files\xyzzy\site-lisp\siteinit.l</li></ul>
+</li>
+<li>次の１行を追加し、上書き保存する。
+<ul class="no_mark"><li>(load-library "create-svg")</li></ul>
+</li>
+<li>xyzzyを開いているなら一旦閉じる。ShiftとCtrlを同時に押しながらxyzzyを起動する。ShiftとCtrlはxyzzyが起動するまでしっかり押しておく。</li>
+</ol>
+<p>これで、xyzzyのメニューバーに「SOBC」(Street Organ Book Creator)という項目が追加される。</p>
+
+<h2>使い方</h2>
+<h3>MuseScore</h3>
+<p>「安暖庭の手回しオルガン」から、いずれかの楽器を選択し、独奏の楽譜を作成する。各楽器には、次の設定がなされている。</p>
+<dl><dt>音域</dt>
+<dd>各楽器の音域（Model IIでは低音のまばらな音域に「プロ向け音域」を設定）</dd>
+<dt>段数</dt>
+<dd>４段（Model Iは３段）</dd>
+<dt>音部記号</dt>
+<dd>ト音３段（Model Iは２段）＋ヘ音１段、すべて１オクターヴ上</dd>
+<dt>アーティキュレーション</dt>
+<dd>テヌート：0.87</dd>
+<dd>テヌート・スタッカート：0.78</dd>
+<dd>スタッカート：0.66</dd>
+<dd>スタッカーティシモ：0.57</dd>
+</dl>
+
+<p>楽譜の段数や音部記号は自由に変更してかまわない。ただし、パートを増やしてはならない。</p>
+
+<p>アーティキュレーションの指定がなければ、アーティキュレーションの値は1とみなされる。上記アーティキュレーションの値は、スタッカーティシモより短い音には音価が半分の音符を選択すれば良いことを考え、1から0.5に向けた等比数列となっている。</p>
+<figure>
+<p style="text-align: center"><img src="articulations.svg" alt=""></p>
+<figcaption style="text-align: center">アーティキュレーションの長さ</figcaption>
+</figure>
+
+<p>完成した楽譜は、xml形式でエクスポートする。</p>
+
+<h3>xyzzy</h3>
+<ol>
+<li>メニューバー「SOBC」から、「xmlからsvg入りhtmlのbookを作成」を選択する。</li>
+<li>MuseScoreで作成したxmlファイルを選択する。</li>
+<li>オルガンのモデルを選択する（すでに同じxmlから作成したブックがある場合、作成しなおすか問合せがある）。</li>
+</ol>
+<p>これで、ブックの切抜きパターンのsvg画像を含むhtmlファイルが生成し、Chromeで開かれる。</p>
+<h2>より詳しくは</h2>
+<p>create-svg.l（lispのソースコード）をお読みください。なお、MuseScoreはpartwiseのmusicXMLを吐き出し、このプログラムは単一パートの楽譜を小節ごとに逐次処理しているため、このプログラムを改変して複数の音色や打楽器のある手回しオルガン用のブック作成を行う場合、各小節に複数のパートのデータをまとめる工夫を加える必要があります。「小節のリスト」を小節番号による配列にしておいて、パートごとに音符データをappendする、とか。</p>
+<ul class="no_mark">
+<li><a href="../print_tips/print_tips.html">印刷方法のヒント</a></li>
+<li><a href="../index0.html">曲目一覧</a></li>
+</ul>
+
+</body>
+</html>

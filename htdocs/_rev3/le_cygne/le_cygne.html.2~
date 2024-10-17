@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<!-- SOBC pseudo-index file -->
+<!--
+******************************************************************************
+	this file is semi-automatically generated 
+	by Street Organ Music Book Creator library 
+	SOBC v2.31
+	words in paragraph "about_this_music" to be inserted manually
+******************************************************************************
+-->
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>サン＝サーンス「白鳥」</title>
+</head>
+<body>
+<h1 id="music-title">サン＝サーンス「白鳥」</h1>
+<p id="about_this_music">
+サン＝サーンスが晩年に唯一残した「おちゃらけ曲集」たる組曲「動物の謝肉祭」の中で、ただ一つ真面目に書かれたと思われる曲。作者は生涯「硬派な作曲家」で通したので、この「おちゃらけ曲集」は闇に葬ろうと「出版を禁ず」と言い残して亡くなったと伝えられている（フランスは彼の死に国葬をもって報いた）にもかかわらず、遺された人々は「金のなる木」を放擲するどころか大ヒットさせてしまい、この曲集は今や彼の代表作と看做されるまでになってしまいました。
+</p>
+<audio controls src="le_cygne.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<ul>
+<li><a href="le_cygne_book.html">ブックパターン</a>(html)　← Chromeでの印刷はこちらをどうぞ</li>
+<li><a href="le_cygne.pdf">譜面</a>(pdf)</li>
+<li><a href="le_cygne.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<p><a href="../SOBC-index.html">曲目一覧に戻る</a></p>
+</body>
+</html>

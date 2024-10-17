@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>Somke Gets In Your Eyes</title>
+</head>
+<body>
+<h3>Somke Gets In Your Eyes</h3>
+<audio controls src="smoke_d1.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<ul>
+<li><a href="smoke_d1_book.html">ブックパターン</a>(html)　←Chromeでの印刷はこちらをどうぞ</li>
+<li><a href="smoke_d1.pdf">譜面</a>(pdf)</li>
+<li><a href="smoke_d1.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>

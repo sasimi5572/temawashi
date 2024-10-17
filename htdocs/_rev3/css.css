@@ -1,0 +1,40 @@
+body {margin: 1em 2em}
+dt {margin-top: 1em}
+dt, dd, li, p {line-height: 160%}
+ul, ol, dl {padding-top: 0.3em; padding-bottom: 0.3em}
+body {background-color: #caffda}
+.br {margin-top: 1em}
+dd {margin-top: 0.5em}
+dl {margin-left: 2em}
+h1 {font-size: 1.4em; font-weight: bold; margin-top: 1.4em; padding-bottom: 0.2em}
+h2 {font-size: 1.3em; margin-bottom: 0.2em}
+h3 {font-size: 1.2em; margin-top: 1.2em; padding-bottom: 0.2em}
+p {padding-top: 0.3em; padding-bottom: 0.3em}
+.no_mark {list-style-type: none}
+audio {padding: 0.8em 0 0 2em;}
+
+.mokuzi ul{
+display: table;
+margin: 0 auto;
+padding: 0;
+width: 80%;
+text-align: center;
+}
+.mokuzi ul li{
+display: table-cell;
+min-width: 50px;
+}
+.mokuzi li a {
+	display: block;
+	color: #555;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  font-weight: bold;
+}
+.mokuzi li a:hover:not(.active) {
+	background-color: #a9bce2;
+}
+.mokuzi .active {
+	background-color: #da3c41;
+}

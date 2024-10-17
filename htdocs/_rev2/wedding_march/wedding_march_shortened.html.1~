@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../../css.css">
+<title>メンデルスゾーン「真夏の夜の夢」より「結婚行進曲」</title>
+</head>
+<body>
+<h3>メンデルスゾーン「真夏の夜の夢」より「結婚行進曲」</h3>
+<audio controls src="wedding_march_shortened.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<ul>
+<li><a href="wedding_march_shortened_book.html">ブックパターン</a>(html)　←Chromeでの印刷はこちらをどうぞ</li>
+<li><a href="wedding_march_shortened.pdf">譜面</a>(pdf)</li>
+<li><a href="wedding_march_shortened.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>

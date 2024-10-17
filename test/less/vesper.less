@@ -1,0 +1,335 @@
+/**
+ * Vesper.less
+ *
+ * @project Vesper: HTML5 Audio player
+ * @version 1.6
+ * @author Jorge Garrido Oval, firezenk@gmail.com
+ * @copyright 2013
+ * @license MIT
+ */
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400&.css");
+
+// Variables
+@audio_gradient_base:				#fff;
+@audio_gradient_target:				#e5e0e4;
+@audio_border_color:				#979797;
+@audio_nums_color:					#979797;
+@audio_progress_width:				150px;
+@audio_progress_height: 			17px;
+
+@progress_height:					20px;
+@progress_border_color:				#979797;
+@progress_border_radius:			50px;
+@progress_outer_gradient_base:		#fff;
+@progress_outer_gradient_target:	#e5e0e4;
+@progress_inner_gradient_base:		#fff;
+@progress_inner_gradient_target:	#f7f7f7;
+@progress_stripes_start_color:		#fff;
+@progress_stripes_stop_color:		#e5e0e4;
+
+@button_gradient_base:				#fff;
+@button_gradient_target:			#e5e0e4;
+@button_text_color:					#979797;
+@button_border_color:				#979797;
+
+@font_weight_normal: 				400;
+@font_icon_size:					36px;
+
+// Functions
+.gradient (@startColor: #eee, @endColor: white) {
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+	background-color: @startColor;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius:   @radius;
+	-moz-border-radius:      @radius;
+	border-radius:         	 @radius;
+	background-clip:         padding-box;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip:    padding;
+}
+
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-left-radius:     @topleft;
+	-moz-border-radius-topleft:         @topleft;
+	border-top-left-radius:             @topleft;
+	-webkit-border-top-right-radius:    @topright;
+
+	-moz-border-radius-topright:        @topright;
+	border-top-right-radius:            @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-moz-border-radius-bottomright:     @bottomright;
+	border-bottom-right-radius:         @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	border-bottom-left-radius:          @bottomleft; 
+	background-clip:         padding-box;
+
+	-moz-background-clip:    padding; 
+	-webkit-background-clip: padding-box; 
+}
+
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.striped-bar (@start_color, @stop_color) {		
+
+	background-color: @stop_color;
+
+	background-image: -webkit-gradient(linear, left top, right bottom,
+						color-stop(.25, @start_color), color-stop(.25, transparent),
+						color-stop(.5, transparent), color-stop(.5, @start_color),
+						color-stop(.75, @start_color), color-stop(.75, transparent),
+						to(transparent));
+	background-image: -webkit-linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, @start_color 75%,
+						transparent 75%, transparent);
+	background-image: -moz-linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, @start_color 75%,
+						transparent 75%, transparent);
+	background-image: -ms-linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, r@start_color 75%,
+						transparent 75%, transparent);
+	background-image: -o-linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, @start_color 75%,
+						transparent 75%, transparent);
+	background-image: linear-gradient(135deg, @start_color 25%, transparent 25%,
+						transparent 50%, @start_color 50%, @start_color 75%,
+						transparent 75%, transparent);
+	background-size: 30px 30px;            
+	
+	-webkit-animation: 	animate-stripes 3s linear infinite;
+	-moz-animation: 	animate-stripes 3s linear infinite;   
+	-ms-animation:  	animate-stripes 3s linear infinite;
+	-webkit-background-size: 30px 30px;
+	-moz-background-size: 30px 30px; 	
+	-ms-background-size: 30px 30px; 	
+}
+
+@-webkit-keyframes animate-stripes { 
+	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+@-moz-keyframes animate-stripes {
+	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+.button-mixin {
+	.border-radius;
+	.gradient(@button_gradient_base, @button_gradient_target);
+	color: 			@button_text_color;
+	font-weight: 	@font_weight_normal;
+
+	&:hover {
+		.gradient(@button_gradient_target, @button_gradient_target);
+		.inner-shadow;
+	}
+}
+
+.antialias {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.rendering {
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'LigatureSymbols';
+    src: url('LigatureSymbols.eot');
+    src: url('LigatureSymbols.eot?#iefix') format('embedded-opentype'),
+         url('LigatureSymbols.woff') format('woff'),
+         url('LigatureSymbols.ttf') format('truetype'),
+         url('LigatureSymbols.svg#LigatureSymbols') format('svg');
+    src: url('LigatureSymbols.ttf') format('truetype');
+}
+
+// Main
+.audio-set {
+	.gradient(@audio_gradient_base, @audio_gradient_target);
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	height: 111px;
+	border:	 1px solid @audio_border_color;
+	font-family:'Open Sans',sans-serif;
+
+	.audio-art {
+		.border-radiuses(0,0,0,4px);
+		float: left;
+		margin-top: 5px;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		width: 64px;
+		height: 64px;
+		background-color: #696969;
+
+		> div {
+			.border-radiuses(0,0,0,4px);
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.audio-progress {
+		display: block;
+		float: left;
+		margin-top: 5px;
+		text-align: center;
+	}
+
+	.audio-controlls {
+		display: block;
+		text-align: center;
+	}
+
+	.audio-play, .audio-stop, .audio-mute, .audio-vup, .audio-vdown {
+		margin-top: 14px;
+		width: 14.4%;
+		border:	0px;
+	}
+
+	.audio-currenttime, .audio-totaltime {
+		color: @audio_nums_color;
+	}
+
+	.audio-time {
+		width: @audio_progress_width;
+		height: @audio_progress_height;
+		border: 0px;
+	}
+
+	.audio-info {
+		.border-radiuses(0,0,4px,0);
+		display: block;
+		float: right;
+		margin-top: 0px;
+		margin-bottom: 4px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		width: 100%;
+		background-color: #696969;
+
+		.waveform {
+			position: relative;
+			top: -45px;
+			margin: 0;
+			padding: 0;
+			margin-bottom: -15px;
+			width: 310px;
+			height: 15px;
+			opacity: 0.5;
+			-webkit-opacity: 0.5;
+			-moz-opacity: 0.5;
+		}
+
+		span {
+			display: block;
+			margin-left: 5px;
+			color: @audio_nums_color;
+			text-align: left;
+			font-size: 10px;
+		}
+	}
+	.border-radius;
+}
+
+progress {
+	.border-radius(@progress_border_radius);
+	padding: 			0px;
+	height: 			@progress_height;
+	border:				1px solid @progress_border_color;
+	appearance: 		none;
+	-moz-appearance: 	none;
+	-webkit-appearance: none;
+	.gradient(@progress_outer_gradient_base, @progress_outer_gradient_target);
+}
+
+// Background of the progress bar background
+progress[role]:after {
+	.border-radius(@progress_border_radius);
+	.inner-shadow();
+	background-image: none;
+	.gradient(@progress_outer_gradient_base, @progress_outer_gradient_target);
+}
+progress {
+	.border-radius(@progress_border_radius);
+	.inner-shadow();
+	background: transparent !important;
+	.gradient(@progress_outer_gradient_base, @progress_outer_gradient_target);
+}
+progress::-webkit-progress-bar {
+	.border-radius(@progress_border_radius);
+	.inner-shadow();
+	background: transparent;
+	.gradient(@progress_outer_gradient_base, @progress_outer_gradient_target);
+}
+
+// Background of the progress bar value
+progress::-moz-progress-bar {
+	.border-radius(@progress_border_radius);
+	border:	1px solid @progress_border_color;
+	.striped-bar(@progress_stripes_start_color, @progress_stripes_stop_color);
+}
+progress::-webkit-progress-value {
+	.border-radius(@progress_border_radius);
+	border:	1px solid @progress_border_color;
+	.striped-bar(@progress_stripes_start_color, @progress_stripes_stop_color);
+}
+progress[aria-valuenow]:before {
+	.border-radius(@progress_border_radius);
+	border:	1px solid @progress_border_color;
+	.striped-bar(@progress_stripes_start_color, @progress_stripes_stop_color);
+}
+
+.brand {
+	.gradient(@audio_gradient_base, @audio_gradient_target);
+	.border-radiuses(0,5px,0,5px);
+	position: relative;
+	bottom: 15px;
+	z-index: 10;
+	display: block;
+	float: right;
+	margin-right: -5px;
+	padding-right: 3px;
+	padding-left: 3px;
+	color: @audio_nums_color;
+	text-align: center;
+	font-size: 9px;
+}
+
+icon {
+  .rendering;
+  font-size:    @font_icon_size;
+  font-family:  'LigatureSymbols';
+  .antialias;
+}
+
+button {
+	.button-mixin;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	icon {
+		font-size: 150%;
+	}
+}

@@ -1,0 +1,85 @@
+body {background-color: #caffda}
+
+h1 {
+  position: relative;
+  padding: 0.5em;
+  background: #a6d3c8;
+  color: white;
+}
+
+h1::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
+
+.playground{
+    padding: 8px 20px;
+    margin: 1em 0;
+    width: 60%;
+    color: #2c2c2f;
+    background: #cde4ff;
+    border-top: solid 5px #5989cf;
+    border-bottom: solid 5px #5989cf;
+    border-left: double 7px #4ec4d3;/*左線*/
+    border-right: double 7px #4ec4d3;/*右線*/
+}
+.playglound p {
+    margin: 0;
+    padding: 0;
+}
+.page-contents ol,details {
+  padding: 0;
+  position: relative;
+}
+
+.page-contents li, ol li,details {
+  color: #2d8fdd;
+  border-left: solid 6px #2d8fdd;/*左側の線*/
+  background: #f1f8ff;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+   line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+}
+
+.tirasi img{
+     border:1px solid #d3d3d3;
+     padding:10px;
+     background-color:#fff;
+}
+
+.mokuzi ul{
+display: table;
+margin: 0 auto;
+padding: 0;
+width: 80%;
+text-align: center;
+}
+
+
+.mokuzi ul li{
+display: table-cell;
+min-width: 50px;
+}
+
+.mokuzi li a {
+	display: block;
+	color: #555;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  font-weight: bold;
+}
+
+.mokuzi li a:hover:not(.active) {
+	background-color: #a9bce2;
+}
+
+.mokuzi .active {
+	background-color: #da3c41;
+}

@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>管理者サイト</title>
+     <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="css/vesper.min.css">
+    <script src="js/vendor/id3.min.js"></script>
+    <script src="js/vendor/observer.js"></script>
+    <script src="js/vendor/wavesurfer.js"></script>
+    <script src="js/vendor/webaudio.js"></script>
+    <script src="js/vendor/drawer.js"></script>
+    <script src="js/vesper.min.js"></script>
+</head>
+<body>
+
+  <div class="audio-set">
+       <audio id="player" src="music/sample.mp3" controlls="controlls" ontimeupdate="zTimeUpdate()"></audio>
+
+       <div id="art" class="audio-art"></div>
+
+       <div class="audio-progress">
+         <span id="currenttime" class="audio-currenttime">0:00</span>
+         <progress id="time" class="audio-time" value="0" max="0"></progress>
+         <span id="totaltime" class="audio-totaltime">0:00</span>
+       </div>
+
+       <div class="audio-controlls">
+         <button id="play" onclick="zPlayPause()" class="audio-play"><icon>play</icon></button>
+         <button onclick="zStop()" class="audio-stop"><icon>stop</icon></button>
+         <button onclick="zMute()" class="audio-mute"><icon>volumeoff</icon></button>
+         <button onclick="zVolumeDown()" class="audio-vdown"><icon>volumedown</icon></button>
+         <button onclick="zVolumeUp()" class="audio-vup"><icon>volumeup</icon></button>
+       </div>
+
+       <div class="audio-info">
+         <span id="artist"></span>
+         <span id="album"></span>
+         <div class="waveform"></div>
+       </div>
+
+       <a href="http://firezenk.github.com/html5player/"><div class="brand">vesper</div></a>
+   </div>
+
+    【注意】ここは管理者がテストなどに利用する場所です。
+    ログインのパスワードはソースとFTPを見ればわかるので確認するように！！！
+    <form onsubmit="document.location.href=this.PW.value + '.html'; return false">
+<input type="password" name="PW">
+<input type="submit" value="OK">
+</form>
+</body>
+</html>

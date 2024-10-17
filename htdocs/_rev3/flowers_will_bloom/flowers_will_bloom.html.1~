@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>花は咲く（３オクターヴ版）</title>
+</head>
+<body>
+<h3>花は咲く（３オクターヴ版）</h3>
+<p>先の編曲が気に入っていたので、基本的に65小節目以降の低音部だけいじりました。</p>
+<audio controls src="flowers_will_bloom.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<ul>
+<li><a href="flowers_will_bloom_book.html">ブックパターン</a>(html)　← Chromeでの印刷はこちらをどうぞ</li>
+<li><a href="flowers_will_bloom.pdf">譜面</a>(pdf)</li>
+<li><a href="flowers_will_bloom.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>

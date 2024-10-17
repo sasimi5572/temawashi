@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>「アイネ・クライネ・ナハトムジーク」第1楽章（モーツァルト）</title>
+</head>
+<body>
+<h3>「アイネ・クライネ・ナハトムジーク」第1楽章（モーツァルト）</h3>
+<audio controls src="eine_kleine_1st.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<ul>
+<li><a href="eine_kleine_1st_book.html">ブックパターン</a>(html)　←Chromeでの印刷はこちらをどうぞ</li>
+<li><a href="eine_kleine_1st.pdf">譜面</a>(pdf)</li>
+<li><a href="eine_kleine_1st.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>ラフマニノフ「ヴォカリーズ」</title>
+</head>
+<body>
+<h3>ラフマニノフ「ヴォカリーズ」（2016年 8月）</h3>
+<p>「ヴォカリーズ」とは「歌詞のない歌曲」のことです。14曲からなる歌曲集の終曲です。曲集の最後に持ってくるということは、ラフマニノフは歌詞を与えなかったこの曲の出来映えには相当自信があったのでしょう。オルガンでうまく鳴れば良いのですが。</p>
+<ul>
+<li><a href="vocalise.pdf">譜面</a>(pdf)</li>
+<li><a href="vocalise_book.pdf">ブックパターン</a>(pdf)</li>
+<li><a href="vocalise.mp3">参考音源</a>(mp3)</li>
+<li><a href="vocalise_book.html">ブックパターンの元ファイル</a>(html)</li>
+<li><a href="vocalise.xml">譜面の元ファイルのテキストデータ</a>(xml)</li>
+<li><a href="vocalise.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<audio controls src="vocalise.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>

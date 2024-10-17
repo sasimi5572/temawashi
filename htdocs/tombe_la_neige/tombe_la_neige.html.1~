@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="ROBOTS" content="NOINDEX">
+<link rel="stylesheet" type="text/css" href="../css.css">
+<title>雪が降る</title>
+</head>
+<body>
+<h3>雪が降る</h3>
+<p>こんなのでどうでしょうか。10/16午前に改訂。ちょっとだから印刷済みなら気にしないでください。</p>
+<ul>
+<li><a href="tombe_la_neige.pdf">譜面</a>(pdf)</li>
+<li><a href="tombe_la_neige_book.pdf">ブックパターン</a>(pdf)</li>
+<li><a href="tombe_la_neige.mp3">参考音源</a>(mp3)</li>
+<li><a href="tombe_la_neige_book.html">ブックパターンの元ファイル</a>(html)</li>
+<li><a href="tombe_la_neige.xml">譜面の元ファイルのテキストデータ</a>(xml)</li>
+<li><a href="tombe_la_neige.mscz">譜面の元ファイル</a>（要<a href="https://musescore.org/ja">MuseScore</a>）</li>
+</ul>
+<audio controls src="tombe_la_neige.mp3">
+<p>音を鳴らそうとしたけれど、うまくできなかったみたい…</p>
+</audio>
+<p><a href="../index0.html">曲目一覧に戻る</a></p>
+</body>
+</html>
